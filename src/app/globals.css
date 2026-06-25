@@ -1,0 +1,139 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-line: var(--line);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-faint: var(--faint);
+  --color-placeholder: var(--placeholder);
+  --color-input-foreground: var(--input-foreground);
+  --color-emphasis: var(--emphasis);
+  --color-body: var(--body);
+  --color-primary-hover: var(--primary-hover);
+  --color-success-hover: var(--success-hover);
+  --color-error-hover: var(--error-hover);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-none: 0px;
+  --radius-50: 2px;
+  --radius-sm: 2px;
+  --radius-100: 4px;
+  --radius-md: 4px;
+  --radius-200: 8px;
+  --radius-lg: 8px;
+  --radius-300: 12px;
+  --radius-xl: 12px;
+  --radius-400: 16px;
+  --radius-2xl: 16px;
+  --radius-round: 999px;
+  --shadow-bottom-small: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
+  --shadow-bottom-medium: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+  --shadow-bottom-large: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
+  --shadow-top-small: 0px -4px 8px 0px rgba(0, 0, 0, 0.04);
+  --shadow-top-medium: 0px -4px 12px 0px rgba(0, 0, 0, 0.04);
+  --shadow-top-large: 0px -4px 16px 0px rgba(0, 0, 0, 0.16);
+  --shadow-center-small: 0px 0px 8px 0px rgba(0, 0, 0, 0.04);
+  --shadow-center-medium: 0px 0px 12px 0px rgba(0, 0, 0, 0.04);
+  --shadow-center-large: 0px 0px 16px 0px rgba(0, 0, 0, 0.16);
+}
+
+:root {
+  /* ISIC tokens → shadcn semantic variables */
+  --background: #ffffff; /* Color.White */
+  --foreground: #000000; /* Color.Black */
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+
+  --primary: #008048; /* Color.Primary.700 — buttons, active tab, active border */
+  --primary-foreground: #ffffff;
+
+  --secondary: #3094e8; /* Color.Secondary.500 */
+  --secondary-foreground: #ffffff;
+
+  --muted: #e8e8e8; /* Color.Neutral.50 — panel backgrounds, disabled bg */
+  --muted-foreground: #6e6e6e; /* Color.Neutral.600 */
+
+  --accent: #dff6ec; /* Color.Primary.50 — hover/active tint */
+  --accent-foreground: #008048;
+
+  --destructive: #e83034; /* Color.Error.500 — error borders */
+  --destructive-foreground: #e20c10; /* Color.Error.600 — error text/asterisk */
+
+  --success: #32ae79; /* Color.Success.600 — success borders */
+  --success-foreground: #298e63; /* Color.Success.700 — success text */
+
+  --faint: #969696; /* Color.Neutral.400 — disabled text, footer text */
+  --line: #bfbfbf; /* Color.Neutral.200 — disabled borders */
+  --placeholder: #ababab; /* Color.Neutral.300 (Figma numbering) — placeholder/helper text */
+  --input-foreground: #303030; /* Color.Neutral.900 — typed value text */
+  --emphasis: #0e814f; /* Color.Primary.800 — accordion title text, chevron icon */
+  --body: #595959; /* Color.Neutral.500 (Figma numbering) — accordion body text */
+  --primary-hover: #006a3c; /* Color.Primary.700 — primary button hover bg */
+  --success-hover: #1f6e4c; /* darkened Success.700 — success button hover bg */
+  --error-hover: #c70003; /* Color.Error.700 — error button hover bg */
+
+  --border: #d4d4d4; /* Color.Neutral.300 — default input/card border */
+  --input: #d4d4d4;
+  --ring: #0e814f; /* Color.Primary.800 — focus ring */
+
+  --radius: 4px; /* Border-radius.100 */
+
+  --sidebar: #ffffff;
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #008048;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e8e8e8;
+  --sidebar-accent-foreground: #008048;
+  --sidebar-border: #e8e8e8;
+  --sidebar-ring: #0e814f;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}

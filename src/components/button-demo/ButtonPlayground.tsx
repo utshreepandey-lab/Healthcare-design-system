@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
-import { IsicButton } from "./IsicButton";
+import { DemoButton } from "./DemoButton";
 import {
   BUTTON_SIZES,
   BUTTON_TYPES,
@@ -133,7 +133,7 @@ export function ButtonPlayground() {
       </div>
 
       <div className="flex min-h-[140px] items-center justify-center rounded-lg bg-background p-10">
-        <IsicButton
+        <DemoButton
           type={type}
           size={size}
           iconOnly={iconOnly}

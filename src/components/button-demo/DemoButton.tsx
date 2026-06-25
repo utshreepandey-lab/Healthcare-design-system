@@ -7,7 +7,7 @@ import {
   type ButtonType,
 } from "./buttonStyles";
 
-export function IsicButton({
+export function DemoButton({
   type,
   size,
   iconOnly,

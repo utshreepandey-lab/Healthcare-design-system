@@ -74,7 +74,7 @@
 }
 
 :root {
-  /* ISIC tokens → shadcn semantic variables */
+  /* Design tokens → shadcn semantic variables */
   --background: #ffffff; /* Color.White */
   --foreground: #000000; /* Color.Black */
   --card: #ffffff;
